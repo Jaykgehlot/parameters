@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('clonning git') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Setup parameters') {
             steps {
                 script { 
